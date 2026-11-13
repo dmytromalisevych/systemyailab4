@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локальний AI Асистент</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f4f4f9; }
+        .chat-container { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .history { height: 300px; overflow-y: auto; margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+        .message { margin-bottom: 10px; padding: 8px 12px; border-radius: 8px; }
+        .user-msg { background: #007bff; color: white; margin-left: 20%; }
+        .ai-msg { background: #e9ecef; color: black; margin-right: 20%; }
+        .error-msg { background: #ffdddd; color: #d8000c; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; }
+        .input-group { display: flex; gap: 10px; }
+        input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; }
+        button:disabled { background: #ccc; }
+        #loader { display: none; font-size: 14px; color: #666; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>🤖 Локальний AI Асистент</h2>
+        <div id="errorBox" class="error-msg"></div>
+        <div id="chatHistory" class="history"></div>
+        <div id="loader">⏳ Модель генерує відповідь...</div>
+        
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Напишіть запит (напр: Що таке API?)" autocomplete="off">
+            <button id="sendBtn">Відправити</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

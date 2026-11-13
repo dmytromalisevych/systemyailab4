@@ -1,0 +1,9 @@
+label,model,concurrency,requests,errors,ttft_p50_s,ttft_p95_s,tokens_per_s_per_user_p50,throughput_tokens_per_s,reasoning
+before,qwen:0.5b,1,16,0,0.023,0.097,184.2,170.5,False
+before,qwen:0.5b,2,16,0,0.486,1.103,188.5,184.4,False
+before,qwen:0.5b,4,16,0,1.57,2.414,179.9,173.7,False
+before,qwen:0.5b,8,16,0,3.213,4.546,187.4,183.4,False
+after,qwen2.5:1.5b,1,16,0,0.058,0.189,73.6,69.3,False
+after,qwen2.5:1.5b,2,16,0,2.568,3.008,72.7,70.1,False
+after,qwen2.5:1.5b,4,16,0,5.594,8.438,72.9,71.5,False
+after,qwen2.5:1.5b,8,16,0,11.803,14.354,73.0,70.8,False
